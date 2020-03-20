@@ -1,1 +1,7 @@
-/SemyonKomyagin.iml
+/.idea/
+/target/
+/*.iml
+/*.jar
+/*.class
+/*.zip
+/*.war
