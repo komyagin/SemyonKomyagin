@@ -1,4 +1,4 @@
-package homework1;
+package hw1;
 
 public class MyClass {
 }
