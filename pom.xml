@@ -46,7 +46,6 @@
             <groupId>com.epam.tat</groupId>
             <artifactId>calculator</artifactId>
             <version>1.0</version>
-            <scope>system</scope>
             <systemPath>${project.basedir}/src/test/resources/calculator-1.0.jar</systemPath>
         </dependency>
         <dependency>
