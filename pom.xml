@@ -46,7 +46,7 @@
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.xml>${project.basedir}/src/test/resources/suites/multiplicationAndDivision.xml</suite.xml>
+                <suite.xml>${project.basedir}/src/test/resources/suites/multiplicationAndDivisionTests.xml</suite.xml>
             </properties>
         </profile>
     </profiles>

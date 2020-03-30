@@ -3,7 +3,11 @@
     <test name="Addition test">
         <classes>
             <class name="hw1.addition.AdditionTest"/>
-            <class name="hw1.subtraction.SubtractionTest"></class>
+        </classes>
+    </test>
+    <test name="Subtraction test">
+        <classes>
+            <class name="hw1.subtraction.SubtractionTest"/>
         </classes>
     </test>
 </suite>
