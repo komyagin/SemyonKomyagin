@@ -13,30 +13,40 @@
         <java.source.version>1.8</java.source.version>
         <java.target.version>1.8</java.target.version>
 
-        <testng.version>7.1.0</testng.version>
+        <testng.version>7.0.0</testng.version>
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+
+        <calculator.version>1.0</calculator.version>
     </properties>
 
     <profiles>
         <profile>
-            <id>sum</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <suite.xml>src/test/resources/lesson01/SumTestSuite.xml</suite.xml>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>multiply</id>
+            <id>all-tests</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.xml>src/test/resources/lesson01/MultiplyTestSuite.xml</suite.xml>
+                <suite.xml>${project.basedir}/src/test/resources/suites/allTests.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>addition-and-subtraction</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/additionAndSubtractionTests.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>multiplication-and-division</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/multiplicationAndDivisionTests.xml</suite.xml>
             </properties>
         </profile>
     </profiles>
@@ -45,8 +55,9 @@
         <dependency>
             <groupId>com.epam.tat</groupId>
             <artifactId>calculator</artifactId>
-            <version>1.0</version>
+            <version>${calculator.version}</version>
             <systemPath>${project.basedir}/src/test/resources/calculator-1.0.jar</systemPath>
+            <scope>system</scope>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All the tests suite">
+    <test name="all-tests">
+        <packages>
+            <package name="hw1"/>
+            <package name="hw1.addition"/>
+            <package name="hw1.subtraction"/>
+            <package name="hw1.division"/>
+            <package name="hw1.multiplication"/>
+            <package name="hw1.trigonometry"/>
+        </packages>
+    </test>
+</suite>
