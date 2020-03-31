@@ -1,15 +1,25 @@
-Homework
+Homework #1
 
 Test structure requirements:
+
 •	Maven project
+
 •	POM xml has structure described in lectures:
-o	main artefacts
-o	properties
-o	dependencies
-o	plugins
+
+•	main artefacts
+
+•	properties
+
+•	dependencies
+
+•	plugins
+
 •	Library calculator-1.0.jar should be added to the project as maven dependence
+
 •	As test runner used TestNg
+
 •	For test maven build used maven-surefire-plugin
+
 •	Code must according Java Code Convention
 
 File placement requirements:
@@ -28,3 +38,7 @@ b.	Tests for multiply and devide operations
 5.	All test data should be provided to test through the DataProviders
 6.	Create 3 maven profiles which allow choose test suite (by default should work profile which run add and subtract operations tests)
 7.	All test must launch through the maven commands
+
+
+Homework #2
+
