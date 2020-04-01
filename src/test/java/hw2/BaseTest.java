@@ -54,19 +54,19 @@ public class BaseTest {
     // 12. Close browser for exercise1
     // 10. Close browser for exercise2
     @AfterClass
-    public  void stop() {
+    public void stop() {
         if (driver != null) {
             driver.quit();
         }
     }
 
     public void logIn() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("user-icon"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("user-icon"))).click();
         wait.until(ExpectedConditions.attributeToBe(By.className("uui-profile-menu"), "class",
                 "dropdown uui-profile-menu open"));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("name"))).sendKeys(USER);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("password"))).sendKeys(PASSWORD);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login-button"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("name"))).sendKeys(USER);
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("password"))).sendKeys(PASSWORD);
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("login-button"))).click();
     }
 
     public void openSite(String url) {
