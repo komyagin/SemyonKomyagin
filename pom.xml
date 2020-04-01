@@ -10,6 +10,9 @@
     <packaging>jar</packaging>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
         <java.source.version>1.8</java.source.version>
         <java.target.version>1.8</java.target.version>
 
@@ -19,34 +22,65 @@
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
 
         <calculator.version>1.0</calculator.version>
+        <seleniumhq.version>3.141.59</seleniumhq.version>
+        <webdrivermanager.version>3.8.1</webdrivermanager.version>
+        <logback.version>1.2.3</logback.version>
+        <slf4j.version>1.7.25</slf4j.version>
     </properties>
 
     <profiles>
         <profile>
-            <id>all-tests</id>
+            <id>hw1-all-tests</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.xml>${project.basedir}/src/test/resources/suites/allTests.xml</suite.xml>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw1/allTests.xml</suite.xml>
             </properties>
         </profile>
         <profile>
-            <id>addition-and-subtraction</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <suite.xml>${project.basedir}/src/test/resources/suites/additionAndSubtractionTests.xml</suite.xml>
-            </properties>
-        </profile>
-        <profile>
-            <id>multiplication-and-division</id>
+            <id>hw1-addition-and-subtraction</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
-                <suite.xml>${project.basedir}/src/test/resources/suites/multiplicationAndDivisionTests.xml</suite.xml>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw1/additionAndSubtractionTests.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw1-multiplication-and-division</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw1/multiplicationAndDivisionTests.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw2-all-tests</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw2/allTests.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw2-exercise1</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw2/exercise1.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw2-exercise2</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw2/exercise2.xml</suite.xml>
             </properties>
         </profile>
     </profiles>
@@ -64,6 +98,26 @@
             <artifactId>testng</artifactId>
             <version>${testng.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${seleniumhq.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
     </dependencies>
 
