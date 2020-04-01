@@ -87,7 +87,7 @@ public class BaseTest {
     }
 
     private WebElement waitForWebElementLocated(By by) {
-        return wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
     public List<WebElement> waitForWebElementsLocated(By by) {
