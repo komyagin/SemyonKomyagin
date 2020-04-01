@@ -91,7 +91,7 @@ public class BaseTest {
     }
 
     public List<WebElement> waitForWebElementsLocated(By by) {
-        return wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
     }
 
     public String getUserName() {
