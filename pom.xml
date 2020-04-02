@@ -83,6 +83,33 @@
                 <suite.xml>${project.basedir}/src/test/resources/suites/hw2/exercise2.xml</suite.xml>
             </properties>
         </profile>
+        <profile>
+            <id>hw3-all-tests</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw3/allTests.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw3-exercise1</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw3/exercise1.xml</suite.xml>
+            </properties>
+        </profile>
+        <profile>
+            <id>hw3-exercise2</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw3/exercise2.xml</suite.xml>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>
