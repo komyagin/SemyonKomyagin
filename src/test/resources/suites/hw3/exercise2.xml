@@ -2,7 +2,7 @@
 <suite name="All the tests suite">
     <test name="all-tests">
         <packages>
-            <package name="hw3.exercise2"/>
+            <package name="hw3.test.exercise2"/>
         </packages>
     </test>
 </suite>
