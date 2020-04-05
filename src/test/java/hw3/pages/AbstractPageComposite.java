@@ -9,23 +9,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public abstract class AbstratctPageComposite {
+public abstract class AbstractPageComposite {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
     protected final int WAIT_TIMEOUT_SECONDS = 10;
 
-    protected AbstratctPageComposite(WebDriver driver) {
+    protected AbstractPageComposite(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS);
         PageFactory.initElements(driver, this);
     }
 
-    protected WebElement waitForWebElementLocated(By by) {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-    }
-
-    protected List<WebElement> waitForWebElementsLocated(By by) {
-        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
-    }
 }

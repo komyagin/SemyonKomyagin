@@ -1,13 +1,13 @@
 package hw3.pages.components;
 
-import hw3.pages.AbstratctPageComposite;
+import hw3.pages.AbstractPageComposite;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class RadioButtonsRow extends AbstratctPageComposite {
+public class RadioButtonsRow extends AbstractPageComposite {
 
     @FindBy(className = "label-radio")
     private List<WebElement> radioButtonElemetnts;

@@ -1,6 +1,6 @@
 package hw3.pages.components;
 
-import hw3.pages.AbstratctPageComposite;
+import hw3.pages.AbstractPageComposite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
-public class LogsSection extends AbstratctPageComposite {
+public class LogsSection extends AbstractPageComposite {
 
     @FindBy(css = ".logs li")
     private List<WebElement> logs;
