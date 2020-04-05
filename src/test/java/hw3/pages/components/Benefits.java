@@ -20,6 +20,11 @@ public class Benefits extends AbstractPageComposite {
         super(driver);
     }
 
+    @Override
+    public List<WebElement> getWebElements() {
+        return benefitImages;
+    }
+
     public int getBenefitImagesCount(){
         return benefitImages.size();
     }
@@ -32,11 +37,4 @@ public class Benefits extends AbstractPageComposite {
         return benefitTexts.stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
-    public boolean isBenefitIconsDisplayed(){
-        boolean isDisplayed = false;
-        for (WebElement element : benefitImages) {
-            isDisplayed = element.isDisplayed();
-        }
-        return isDisplayed;
-    }
 }

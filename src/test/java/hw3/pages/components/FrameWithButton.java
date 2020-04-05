@@ -5,15 +5,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class IFrame extends AbstractPageComposite {
+import java.util.List;
+
+public class FrameWithButton extends AbstractPageComposite {
 
     @FindBy(id = "frame")
     private WebElement frame;
     @FindBy(id = "button-frame")
     private WebElement button;
 
-    public IFrame(WebDriver driver) {
+    public FrameWithButton(WebDriver driver) {
         super(driver);
+    }
+
+    @Override
+    public List<WebElement> getWebElements() {
+        throw new UnsupportedOperationException();
     }
 
     public void switchToFrame(){

@@ -16,10 +16,9 @@ public class CheckboxRow extends AbstractPageComposite {
         super(driver);
     }
 
-    public void setCheckBox(String checkboxName){
-        for (WebElement checkBoxElement : checkBoxElements) {
-            if(!checkBoxElement.isSelected() & checkBoxElement.getText().equals(checkboxName))
-                checkBoxElement.click();
-        }
+    @Override
+    public List<WebElement> getWebElements() {
+        return checkBoxElements;
     }
+
 }

@@ -19,30 +19,15 @@ public class LogsSection extends AbstractPageComposite {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("info-panel-body-log")));
     }
 
-    public boolean isCheckboxLogDisplayed(String checkboxName, String status) {
-        boolean isDisplayed = false;
-        for (WebElement log : logs) {
-            if (log.getText().contains(checkboxName + ": condition changed to " + status)) {
-                isDisplayed = true;
-            }
-        }
-        return isDisplayed;
+    @Override
+    public List<WebElement> getWebElements() {
+        return logs;
     }
 
-    public boolean isRadioLogDisplayed(String radioName) {
+    public boolean isElementIsDisplayedOnSection(String elementName, String status) {
         boolean isDisplayed = false;
         for (WebElement log : logs) {
-            if (log.getText().contains("metal: value changed to " + radioName)) {
-                isDisplayed = true;
-            }
-        }
-        return isDisplayed;
-    }
-
-    public boolean isDropdownLogDisplayed(String dropdownValue) {
-        boolean isDisplayed = false;
-        for (WebElement log : logs) {
-            if (log.getText().contains("Colors: value changed to " + dropdownValue)) {
+            if (log.getText().contains(elementName + ": condition changed to " + status)) {
                 isDisplayed = true;
             }
         }

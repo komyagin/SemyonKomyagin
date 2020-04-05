@@ -17,13 +17,12 @@ public class SideBarMenu extends AbstractPageComposite {
         super(driver);
     }
 
-    public boolean isSidebarElementsDisplayed(){
-        boolean isDisplayed = false;
-        for (WebElement element : sideBarMenuElements) {
-            isDisplayed = element.isDisplayed();
-        }
-        return isDisplayed;
+    @Override
+    public List<WebElement> getWebElements() {
+        return sideBarMenuElements;
     }
+
+
     public List<String> getSideBarMenuElementsText(){
         return sideBarMenuElements.stream().map(WebElement::getText).collect(Collectors.toList());
     }

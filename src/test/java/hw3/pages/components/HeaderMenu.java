@@ -31,6 +31,11 @@ public class HeaderMenu extends AbstractPageComposite {
         super(driver);
     }
 
+    @Override
+    public List<WebElement> getWebElements() {
+        return headerMenuElements;
+    }
+
     public void login(String user, String pass){
         wait.until(ExpectedConditions.elementToBeClickable(By.id("user-icon"))).click();
         wait.until(ExpectedConditions.attributeToBe(By.className("uui-profile-menu"), "class",
@@ -46,16 +51,11 @@ public class HeaderMenu extends AbstractPageComposite {
     public String getUserName(){
         return userName.getText();
     }
+
     public List<String> getHeaderMenuElementsText(){
         return headerMenuElements.stream().map(WebElement::getText).collect(Collectors.toList());
     }
-    public boolean isHeaderMenuItemsDisplayed(){
-        boolean isDisplayed = false;
-        for (WebElement element : headerMenuElements) {
-            isDisplayed = element.isDisplayed();
-        }
-        return isDisplayed;
-    }
+
     public void goToDifferentElementPage(){
         serviceDropdown.click();
         wait.until(ExpectedConditions.attributeToBe(By.cssSelector(".m-l8 .dropdown"),"class","dropdown open"));

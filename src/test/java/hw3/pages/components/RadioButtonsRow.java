@@ -16,10 +16,10 @@ public class RadioButtonsRow extends AbstractPageComposite {
         super(driver);
     }
 
-    public void setRadio(String radioButtonName){
-        for (WebElement radioButtonElement : radioButtonElemetnts) {
-            if(!radioButtonElement.isSelected() & radioButtonElement.getText().equals(radioButtonName))
-                radioButtonElement.click();
-        }
+    @Override
+    public List<WebElement> getWebElements() {
+        return radioButtonElemetnts;
     }
+
+
 }

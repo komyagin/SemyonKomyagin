@@ -2,7 +2,7 @@ package hw3.pages;
 
 import hw3.pages.components.Benefits;
 import hw3.pages.components.HeaderMenu;
-import hw3.pages.components.IFrame;
+import hw3.pages.components.FrameWithButton;
 import hw3.pages.components.SideBarMenu;
 import org.openqa.selenium.WebDriver;
 
@@ -12,13 +12,13 @@ import java.util.List;
 public class JDITestingHomePage extends AbstractPage {
 
     private Benefits benefits;
-    private IFrame iframe;
+    private FrameWithButton frameWithButton;
 
     public JDITestingHomePage(WebDriver driver) {
         this.driver = driver;
         this.headerMenu = new HeaderMenu(driver);
         this.benefits = new Benefits(driver);
-        this.iframe = new IFrame(driver);
+        this.frameWithButton = new FrameWithButton(driver);
         this.sideBarMenu = new SideBarMenu(driver);
     }
 
@@ -43,7 +43,7 @@ public class JDITestingHomePage extends AbstractPage {
     }
 
     public boolean isHeaderMenuItemsDisplayed() {
-        return headerMenu.isHeaderMenuItemsDisplayed();
+        return headerMenu.isElementsDisplayed(headerMenu.getWebElements());
     }
 
     public int getBenefitImagesCount() {
@@ -59,27 +59,27 @@ public class JDITestingHomePage extends AbstractPage {
     }
 
     public boolean isBenefitIconsDisplayed() {
-        return benefits.isBenefitIconsDisplayed();
+        return benefits.isElementsDisplayed(benefits.getWebElements());
     }
 
     public boolean isIFrameDisplayed() {
-        return iframe.isFrameDisplayed();
+        return frameWithButton.isFrameDisplayed();
     }
 
     public boolean isIFrameButtonDisplayed() {
-        return iframe.isButtonDisplayed();
+        return frameWithButton.isButtonDisplayed();
     }
 
     public void switchToFrame() {
-        iframe.switchToFrame();
+        frameWithButton.switchToFrame();
     }
 
     public void switchToDefault() {
-        iframe.switchToDefaultWindow();
+        frameWithButton.switchToDefaultWindow();
     }
 
     public boolean isSidebarElementsDisplayed() {
-        return sideBarMenu.isSidebarElementsDisplayed();
+        return sideBarMenu.isElementsDisplayed(sideBarMenu.getWebElements());
     }
 
     public List<String> getSideBarMenuElementsText() {
