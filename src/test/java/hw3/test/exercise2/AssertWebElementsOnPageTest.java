@@ -3,9 +3,6 @@ package hw3.test.exercise2;
 import hw3.pages.JDITestingDifferentElementsPage;
 import hw3.pages.JDITestingHomePage;
 import hw3.test.BaseTest;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
