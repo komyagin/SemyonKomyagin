@@ -1,3 +1,5 @@
+/.allure/
+/allure-results/
 /.idea/
 /target/
 /logs/
@@ -5,4 +7,3 @@
 /*.class
 /*.zip
 /*.war
-
