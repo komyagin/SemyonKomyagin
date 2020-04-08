@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All the tests suite">
+    <test name="all-tests">
+        <packages>
+            <package name="hw4.exercise1"/>
+        </packages>
+    </test>
+</suite>
