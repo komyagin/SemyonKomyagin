@@ -1,0 +1,17 @@
+Layers have already implemented:
+
+-Test implementation layer
+-Test run layer
+-Configuration layer
+-Utility layer
+-Test data layer
+
+Layers have already missed:
+
+-Test logic layer
+-Service layer
+-Report and logs layer
+
+My current solution could be improved by implementing missed layers
+
+=^_^=
