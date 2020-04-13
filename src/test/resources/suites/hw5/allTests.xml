@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All the tests suite">
+    <test name="all-tests">
+        <classes>
+            <class name="hw5.test.exercise1.FirstHomePageTest"/>
+            <class name="hw5.test.exercise1.SecondDifferentElementsPageTest"/>
+            <class name="hw5.test.exercise2.FirstHomePageFailedTest"/>
+        </classes>
+    </test>
+</suite>
