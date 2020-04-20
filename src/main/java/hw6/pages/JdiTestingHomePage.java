@@ -23,8 +23,8 @@ public class JdiTestingHomePage extends AbstractPage {
         this.sideBarMenu = new SideBarMenu(driver);
     }
 
-    public void login(String username, String password) {
-        headerMenu.login(new User(username, password));
+    public void login(User user) {
+        headerMenu.login(user);
     }
 
     public boolean isUserNameDisplayed() {

@@ -7,7 +7,6 @@ import hw6.pages.utils.WebDriverSingleton;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Then;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -76,13 +75,7 @@ public class ThenSteps {
 
     @Then("User table should contain following values:")
     public void iAssertContentOfTableOnUserTablePAge(List<JdiUser> users) {
-        List<JdiUser> actualUserTable = new ArrayList<>();
-        List<String> numbers = userTablePage.getUsersIds();
-        List<String> usernames = userTablePage.getUsersNames();
-        List<String> description = userTablePage.getUsersImagesDescriptions();
-        for (int i = 0; i < numbers.size(); i++) {
-            actualUserTable.add(new JdiUser(numbers.get(i), usernames.get(i), description.get(i)));
-        }
+        List<JdiUser> actualUserTable = userTablePage.getUsers();
         assertThat(actualUserTable).isEqualTo(users);
     }
 

@@ -3,7 +3,7 @@ Feature: Different Elements page web elements page test
   Scenario: Entering Different Elements page a and interacting with elements
     Given I am on Home page
     And I login as username: 'Roman' password: 'Jdi1234'
-    And I go through the header menu Service -> Different Elements Page
+    And I go through the header menu Service -> 'Different Elements Page'
     When I select checkboxes
       | Checkboxes |
       | Water      |

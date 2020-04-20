@@ -1,6 +1,7 @@
 package hw6.steps;
 
 import hw6.pages.JdiTestingHomePage;
+import hw6.pages.enteties.User;
 import hw6.pages.utils.WebDriverSingleton;
 import hw6.utils.Properties;
 import io.cucumber.java.en.Given;
@@ -17,16 +18,19 @@ public class GivenSteps {
 
     @Given("I login as username: {string} password: {string}")
     public void iLoginOnIndexPage(String username, String password) {
-        homePage.login(username, password);
+        homePage.login(new User(username, password));
     }
 
-    @Given("I go through the header menu Service -> Different Elements Page")
-    public void iOpenDifferentElementsPageThroughHeaderOnIndexPage() {
-        homePage.goToDifferentElementsPage();
-    }
+    @Given("I go through the header menu Service -> {string}")
+    public void iGoOnSpecificPage(String page) {
+        switch (page) {
+            case "Different Elements Page":
+                homePage.goToDifferentElementsPage();
+                break;
+            case "User Table":
+                homePage.goToUserTablePage();
+                break;
+        }
 
-    @Given("I go through the header menu Service -> User Table")
-    public void iOpenUserTablePageThroughHeaderOnIndexPage() {
-        homePage.goToUserTablePage();
     }
 }

@@ -1,6 +1,7 @@
 package hw6.pages;
 
 import hw6.pages.components.LogsSection;
+import hw6.pages.enteties.JdiUser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -130,5 +132,16 @@ public class JdiTestingUserTablePage extends AbstractPage {
 
     private void waitForVisibilityOf(List<WebElement> elements) {
         logsSection.wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+    }
+
+    public List<JdiUser> getUsers() {
+        List<JdiUser> actualUserTable = new ArrayList<>();
+        List<String> numbers = getUsersIds();
+        List<String> usernames = getUsersNames();
+        List<String> description = getUsersImagesDescriptions();
+        for (int i = 0; i < numbers.size(); i++) {
+            actualUserTable.add(new JdiUser(numbers.get(i), usernames.get(i), description.get(i)));
+        }
+        return actualUserTable;
     }
 }

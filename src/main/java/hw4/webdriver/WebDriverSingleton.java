@@ -1,6 +1,5 @@
 package hw4.webdriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +13,7 @@ public enum WebDriverSingleton {
 
     public void createdDriver(String browserName) {
         if ("CHROME".equalsIgnoreCase(browserName)) {
-            WebDriverManager.chromedriver().setup();
+            //WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             wait = new WebDriverWait(driver, 10);
         }

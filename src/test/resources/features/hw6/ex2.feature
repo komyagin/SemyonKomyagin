@@ -3,7 +3,7 @@ Feature: User page web elements test
   Scenario: User Table Page test
     Given I am on Home page
     And  I login as username: 'Roman' password: 'Jdi1234'
-    When I go through the header menu Service -> User Table
+    When I go through the header menu Service -> 'User Table'
     Then User Table page should be opened
     And 6 Number Type Dropdowns should be displayed on Users Table on User Table Page
     And 6 Usernames should be displayed on Users Table on User Table Page
