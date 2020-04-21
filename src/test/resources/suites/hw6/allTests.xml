@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Cucumber tests for BDD part">
+    <test name="all-tests">
+        <classes>
+            <class name="hw6.RunCucumberTests"/>
+        </classes>
+    </test>
+</suite>
