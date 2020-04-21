@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="JDI Light tests">
+    <test name="all-tests">
+        <classes>
+            <class name="hw7.MetalAndColorsTest"/>
+        </classes>
+    </test>
+</suite>
