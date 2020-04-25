@@ -3,6 +3,7 @@ package hw7.entities;
 import com.epam.jdi.tools.DataClass;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ import java.util.List;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class MetalAndColors extends DataClass<MetalAndColors> {
 
     private static final String LINE_SEPARATOR = ", ";
@@ -21,10 +23,6 @@ public class MetalAndColors extends DataClass<MetalAndColors> {
     private String color;
     private String metal;
     private List<String> vegetables;
-
-    public MetalAndColors() {
-
-    }
 
     public List<String> getExpectedResults(){
         return new ArrayList<String>() {{

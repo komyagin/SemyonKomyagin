@@ -4,7 +4,6 @@ import com.epam.jdi.light.elements.common.Label;
 import com.epam.jdi.light.elements.complex.Menu;
 import com.epam.jdi.light.elements.composite.WebPage;
 import com.epam.jdi.light.elements.pageobjects.annotations.locators.Css;
-import com.epam.jdi.light.elements.pageobjects.annotations.locators.XPath;
 import com.epam.jdi.light.ui.html.elements.common.Button;
 import hw7.entities.User;
 import hw7.enums.HeaderMenuItem;
@@ -21,7 +20,7 @@ public class BasePage extends WebPage {
     @Css("#user-icon")
     private Button userIcon;
 
-    @XPath("//ul[@class='uui-navigation nav navbar-nav m-l8']/li")
+    @Css(".m-l8 > li")
     private Menu headerMenu;
 
     public void login(User user) {
