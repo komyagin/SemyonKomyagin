@@ -16,8 +16,8 @@
         <java.source.version>1.8</java.source.version>
         <java.target.version>1.8</java.target.version>
 
-        <testng.version>7.0.0</testng.version>
-        <assertj.version>3.15.0</assertj.version>
+        <testng.version>7.1.0</testng.version>
+        <assertj.version>3.14.0</assertj.version>
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
@@ -40,7 +40,9 @@
 
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.25</slf4j.version>
+
         <driver>chrome</driver>
+        <domain>https://jdi-testing.github.io/jdi-light/</domain>
     </properties>
 
     <profiles>
@@ -171,6 +173,15 @@
                 <suite.xml>${project.basedir}/src/test/resources/suites/hw6/allTests.xml</suite.xml>
             </properties>
         </profile>
+        <profile>
+            <id>hw7-all-tests</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw7/allTests.xml</suite.xml>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>
@@ -206,18 +217,17 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${seleniumhq.version}</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdrivermanager.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
