@@ -14,5 +14,7 @@ Homework #6 - BDD, TDD, Cucumber.
 
 Homework #7 - Using JDI Light Framework.
 
+Homework #8 - Test SOAP API using SOAPUI
+
 
 
