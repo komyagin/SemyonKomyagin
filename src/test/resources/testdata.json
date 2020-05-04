@@ -1,0 +1,36 @@
+[
+  {
+    "texts": [
+      "I love",
+      "codingi",
+      "every day and",
+      "nigcht"
+    ],
+    "expectedMistakes": [
+      [""],
+      ["coding"],
+      [""],
+      ["night"]
+    ],
+    "mistakesCount": [
+      0,
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "texts": [
+      "creade",
+      "condent"
+    ],
+    "expectedMistakes": [
+      ["create"],
+      ["content"]
+    ],
+    "mistakesCount": [
+      1,
+      1
+    ]
+  }
+]

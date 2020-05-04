@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="REST tests">
+    <test name="all-tests">
+        <classes>
+            <class name="hw9.SpellerTextTest"/>
+            <class name="hw9.SpellerTextsTest"></class>
+        </classes>
+    </test>
+</suite>
