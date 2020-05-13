@@ -35,7 +35,7 @@ public class SpellerTextsTest {
     @Test(description = "Checking texts using DDT", dataProvider = "getJsonData")
     void checkTextsUsingDDT(InputDataSet dataSet) {
 
-        YandexSpellerDto[][] spellerResults = new YandexSpellerSteps().checkTexts(dataSet.getTexts());
+        YandexSpellerDto[][] spellerResults = new YandexSpellerSteps().checkText(dataSet.getTexts());
 
         new YandexSpellerAssertions(spellerResults, dataSet)
                 .verifyNumberOfMistakes()
