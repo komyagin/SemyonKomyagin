@@ -38,6 +38,9 @@
         <lombok.vesrion>1.18.12</lombok.vesrion>
         <guava.version>22.0</guava.version>
 
+        <restassured.version>4.2.0</restassured.version>
+        <gson.version>2.8.6</gson.version>
+
         <logback.version>1.2.3</logback.version>
         <slf4j.version>1.7.25</slf4j.version>
 
@@ -182,6 +185,15 @@
                 <suite.xml>${project.basedir}/src/test/resources/suites/hw7/allTests.xml</suite.xml>
             </properties>
         </profile>
+        <profile>
+            <id>hw9-all-tests</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.xml>${project.basedir}/src/test/resources/suites/hw9/allTests.xml</suite.xml>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>
@@ -217,6 +229,16 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restassured.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>

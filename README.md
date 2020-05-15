@@ -16,5 +16,5 @@ Homework #7 - Using JDI Light Framework.
 
 Homework #8 - Test SOAP API using SOAPUI
 
-
+Homework #9 - Test REST API using REST Assured
 
